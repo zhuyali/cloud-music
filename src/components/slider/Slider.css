@@ -1,0 +1,7 @@
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #d43c33!important;
+}

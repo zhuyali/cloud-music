@@ -1,0 +1,27 @@
+.searchbar-container {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  background: #d43c33;
+  padding: 0 10px 0 5px;
+}
+
+.searchbar-music {
+  width: 30px;
+  height: 35px;
+}
+
+.searchbar-station {
+  width: 23px;
+  height: 23px;
+}
+
+.searchbar-input {
+  flex: 1;
+  height: 27px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 13px;
+  margin: 0 19px 0 13px;
+  border: 1px solid #d43c33;
+}

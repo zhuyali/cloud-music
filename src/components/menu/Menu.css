@@ -1,0 +1,33 @@
+.menu-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 40px;
+  text-align: center;
+  background: #f8f8f9;
+}
+
+.menu-item {
+  display: inline-block;
+  flex: 1;
+  list-style: none;
+  line-height: 40px;
+}
+
+.menu-item-actived {
+  display: inline-block;
+  color: #d43c33;
+}
+
+.menu-line {
+  position: absolute;
+  top: 38px;
+  height: 2px;
+  background: #d43c33;
+  transition: left 0.3s;
+}
+
+.menu-wrapper {
+  position: relative;
+}
