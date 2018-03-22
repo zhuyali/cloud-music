@@ -1,15 +1,12 @@
 import React from 'react';
 
-import Slider from './slider/Slider';
-import Optionbar from './optionbar/Optionbar';
 import Musiclist from './musiclist/Musiclist';
-import Titlelink from './titlelink/Titlelink';
 
-class Homepage extends React.Component {
+class SongSheet extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recommendList: [{
+      songsheetList: [{
         img: 'http://p1.music.126.net/2nPPbvXNVwUyM4n1Atiwgw==/109951163191963379.jpg',
         desc: '港片金曲｜相逢一场情"忆"满满演唱会'
       }, {
@@ -27,29 +24,19 @@ class Homepage extends React.Component {
       }, {
         img: 'http://p1.music.126.net/KsGj-uPLvKQL0KTaQi0xkQ==/18678503535409218.jpg',
         desc: 'ʚ韩语ɞ砂糖质感温软女声'
-      }],
-      exclusiveList: [{
-        img: 'http://p1.music.126.net/BMPo0UyZCWi3O_rp3f9CRA==/109951163199126055.jpg?param=565y247',
-        desc: '小李子经典混剪，多少人曾爱慕你年轻时的容颜'
-      }, {
-        img: 'http://p1.music.126.net/eD1ifZMc2lalg9hCbEs1lA==/109951163179337806.jpg?param=565y247',
-        desc: '唯美原创《淡无烟》，愿月照河山，醒时无波澜'
       }]
     }
   }
 
   render() {
     return (
-      <div className='page homepage'>
-        <Slider></Slider>
-        <Optionbar></Optionbar>
-        <Titlelink title='推荐歌单' path='/recommend'></Titlelink>
-        <Musiclist cols='3' list={this.state.recommendList}></Musiclist>
-        <Titlelink title='独家放送'></Titlelink>
-        <Musiclist cols='2' list={this.state.exclusiveList}></Musiclist>
+      <div className='page songSheet'>
+        <img className='banner songsheet-banner' src='http://ozt4jt8av.bkt.clouddn.com/3ds.png' />
+        <div className='songsheet-nav'>nav</div>
+        <Musiclist cols='2' list={this.state.songsheetList}></Musiclist>
       </div>
     );
   }
 }
 
-export default Homepage;
+export default SongSheet;

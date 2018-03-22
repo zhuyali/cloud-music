@@ -1,17 +1,17 @@
 import React from 'react';
 
-class Recommend extends React.Component {
+class Rank extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <div className='page recommend'>
-        Recommend
+      <div className='page rank'>
+        Rank
       </div>
     );
   }
 }
 
-export default Recommend;
+export default Rank;
