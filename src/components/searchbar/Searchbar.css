@@ -1,9 +1,13 @@
 .searchbar-container {
-  height: 46px;
+  position: fixed;
   display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
   align-items: center;
   background: #d43c33;
   padding: 0 10px 0 5px;
+  z-index: 100;
 }
 
 .searchbar-music {

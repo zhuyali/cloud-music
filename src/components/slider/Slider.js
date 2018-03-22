@@ -3,7 +3,7 @@ import React from 'react';
 import Swiper from 'react-id-swiper';
 
 import './Slider.css';
-import '../../../node_modules/react-id-swiper/src/styles/css/swiper.css'
+import '../../../node_modules/react-id-swiper/src/styles/css/swiper.css';
 
 class Slider extends React.Component {
   constructor(props) {

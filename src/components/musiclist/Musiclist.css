@@ -1,0 +1,29 @@
+.musiclist-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.musiclist-item {
+  box-sizing: border-box;
+  margin-bottom: 4px;
+}
+
+.musiclist-item-3 {
+  width: calc((100% - 10px) / 3);
+}
+
+.musiclist-item-3:nth-child(3n-1) {
+  flex: 1;
+  padding: 0 5px;
+}
+
+.musiclist-item-banner {
+  width: 100%;
+}
+
+.musiclist-item-label {
+  height: 40px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 19px;
+}

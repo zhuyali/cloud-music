@@ -7,6 +7,15 @@ import './Menu.css';
 class Menu extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      menuItems: [{
+        path: '/',
+        name: '发现音乐'
+      }, {
+        path: '/station',
+        name: '主播电台'
+      }]
+    }
   }
 
   handleMenuClick(e) {
@@ -14,27 +23,28 @@ class Menu extends React.Component {
     if (!hasClass) {
       $('.menu-item div').toggleClass('menu-item-actived');
     }
-    $('.menu-line').css({'width': $('.menu-item-actived').width() + 4, 'left': $('.menu-item-actived').offset().left - 2});
+    $('.menu-line').css({ 'width': $('.menu-item-actived').width() + 4, 'left': $('.menu-item-actived').offset().left - 2 });
   }
 
   componentDidMount() {
-    $('.menu-line').css({'width': $('.menu-item-actived').width() + 4, 'left': $('.menu-item-actived').offset().left - 2});
+    $('.menu-line').css({ 'width': $('.menu-item-actived').width() + 4, 'left': $('.menu-item-actived').offset().left - 2 });
   }
 
   render() {
     return (
-      <div className="menu-wrapper">
+      <div className='menu-wrapper'>
         <ul className='menu-container'>
-          <li className='menu-item'>
-            <div className='menu-item-actived' onClick={e => this.handleMenuClick(e)}>
-              <Link to='/'>发现音乐</Link>
-            </div>
-          </li>
-          <li className='menu-item' value='1'>
-            <div onClick={e => this.handleMenuClick(e)}>
-              <Link to='/station'>主播电台</Link>
-            </div>
-          </li>
+          {
+            this.state.menuItems.map((menuItem, index) => {
+              return (
+                <li className='menu-item'>
+                  <div className={index === 0 ? 'menu-item-actived': ''} onClick={e => this.handleMenuClick(e)}>
+                    <Link to={menuItem.path}>{menuItem.name}</Link>
+                  </div>
+                </li>
+              )
+            })
+          }
         </ul>
         <div className='menu-line'></div>
       </div>

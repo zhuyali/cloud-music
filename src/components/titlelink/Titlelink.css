@@ -1,0 +1,14 @@
+.title-link {
+  display: table-cell;
+  vertical-align: middle;
+  height: 45px;
+  padding-left: 10px;
+  color: #333;
+}
+
+.icon-to-right {
+  position: relative;
+  top: 1px;
+  padding-left: 6px;
+  width: 13px;
+}

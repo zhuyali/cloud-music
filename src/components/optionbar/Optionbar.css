@@ -1,0 +1,39 @@
+.optionbar-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.optionbar-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.optionbar-icon-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #d43c33;
+  border-radius: 100%;
+}
+
+.optionbar-item-label {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.optionbar-item-date {
+  position: absolute;
+  color: #d43c33;
+  top: 23px;
+  font-size: 12px;
+  left: calc(50% - 6px);
+}
+
+.optionbar-item-icon {
+  position: relative;
+  top: 2px;
+}

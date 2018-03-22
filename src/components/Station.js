@@ -7,7 +7,7 @@ class Station extends React.Component {
 
   render() {
     return (
-      <div className='station'>
+      <div className='page station'>
         station
       </div>
     );

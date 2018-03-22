@@ -9,6 +9,18 @@ import Searchbar from './components/searchbar/Searchbar';
 
 import './index.css';
 
+const PersonalFM = () => (
+  <div>
+    <h3>私人FM</h3>
+  </div>
+)
+
+const Recommend = () => (
+  <div>
+    <h3>每日推荐</h3>
+  </div>
+)
+
 ReactDOM.render(
   <Router>
     <div>
@@ -16,6 +28,8 @@ ReactDOM.render(
       <Menu></Menu>
       <Route exact path='/' component={Homepage} />
       <Route path='/station' component={Station} />
+      <Route path='/personalFM' component={PersonalFM} />
+      <Route path='/recommend' component={Recommend} />
     </div>
   </Router>,
   document.getElementById('app')
