@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import { Link } from 'react-router-dom';
 
 import './Optionbar.css';
@@ -40,7 +39,7 @@ class Optionbar extends React.Component {
                     <img className='optionbar-item-icon' src={optionItem.icon} />
                   </div>
                   <div className='optionbar-item-label'>{optionItem.name}</div>
-                  {optionItem.name === '每日推荐' ? <label className='optionbar-item-date'>{moment().date()}</label> : ''}
+                  {optionItem.name === '每日推荐' ? <label className='optionbar-item-date'>{new Date().getDate()}</label> : ''}
                 </Link>
               </div>
             );
