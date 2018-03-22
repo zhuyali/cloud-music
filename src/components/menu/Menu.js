@@ -37,11 +37,13 @@ class Menu extends React.Component {
           {
             this.state.menuItems.map((menuItem, index) => {
               return (
-                <li className='menu-item'>
-                  <div className={index === 0 ? 'menu-item-actived': ''} onClick={e => this.handleMenuClick(e)}>
-                    <Link to={menuItem.path}>{menuItem.name}</Link>
-                  </div>
-                </li>
+                <Link to={menuItem.path} className='menu-item'>
+                  <li>
+                    <div className={index === 0 ? 'menu-item-actived' : ''} onClick={e => this.handleMenuClick(e)}>
+                      {menuItem.name}
+                    </div>
+                  </li>
+                </Link>
               )
             })
           }
