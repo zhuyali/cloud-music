@@ -7,7 +7,7 @@ class PersonalFM extends React.Component {
 
   render() {
     return (
-      <div className='page personalFM'>
+      <div className='personalFM'>
         PersonalFM
       </div>
     );

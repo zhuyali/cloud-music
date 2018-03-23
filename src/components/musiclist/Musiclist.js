@@ -9,7 +9,7 @@ class Musiclist extends React.Component {
 
   render() {
     return (
-      <div className='musiclist-wrapper'>
+      <div className='musiclist-wrapper clearfix'>
         {
           this.props.list.map((item, index) => {
             return (

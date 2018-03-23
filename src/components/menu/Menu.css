@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   color: #333;
-  height: 40px;
+  height: 33px;
+  font-size: 13px;
   text-align: center;
   background: #f8f8f9;
 }
@@ -12,7 +13,7 @@
   display: inline-block;
   flex: 1;
   list-style: none;
-  line-height: 40px;
+  line-height: 33px;
 }
 
 .menu-item-actived {
@@ -22,7 +23,7 @@
 
 .menu-line {
   position: absolute;
-  top: 38px;
+  top: 31px;
   height: 2px;
   background: #d43c33;
   transition: left 0.3s;
@@ -31,6 +32,6 @@
 .menu-wrapper {
   position: fixed;
   width: 100%;
-  top: 46px;
+  top: 38px;
   z-index: 100;
 }

@@ -7,7 +7,7 @@ class Rank extends React.Component {
 
   render() {
     return (
-      <div className='page rank'>
+      <div className='rank'>
         Rank
       </div>
     );

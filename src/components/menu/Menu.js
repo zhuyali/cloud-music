@@ -9,7 +9,7 @@ class Menu extends React.Component {
     super(props);
     this.state = {
       menuItems: [{
-        path: '/',
+        path: '/home',
         name: '发现音乐'
       }, {
         path: '/station',

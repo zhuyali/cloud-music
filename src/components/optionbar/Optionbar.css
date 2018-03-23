@@ -1,5 +1,5 @@
 .optionbar-wrapper {
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #EBEBEB;
@@ -14,8 +14,8 @@
 .optionbar-icon-wrapper {
   display: table-cell;
   vertical-align: middle;
-  width: 53px;
-  height: 53px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #d43c33;
   border-radius: 100%;
 }
@@ -28,7 +28,7 @@
 .optionbar-item-date {
   position: absolute;
   color: #d43c33;
-  top: 23px;
+  top: 15px;
   font-size: 12px;
   left: calc(50% - 7px);
 }
@@ -36,4 +36,6 @@
 .optionbar-item-icon {
   position: relative;
   top: 2px;
+  width: 20px;
+  height: 20px;
 }

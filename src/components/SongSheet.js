@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Musiclist from './musiclist/Musiclist';
+import Searchbar from './searchbar/Searchbar';
 
 class SongSheet extends React.Component {
   constructor(props) {
@@ -24,16 +25,32 @@ class SongSheet extends React.Component {
       }, {
         img: 'http://p1.music.126.net/KsGj-uPLvKQL0KTaQi0xkQ==/18678503535409218.jpg',
         desc: 'ʚ韩语ɞ砂糖质感温软女声'
-      }]
+      }],
+      type: '0'
     }
   }
 
   render() {
+    let key = this.props.location.pathname;
     return (
-      <div className='page songSheet'>
-        <img className='banner songsheet-banner' src='http://ozt4jt8av.bkt.clouddn.com/3ds.png' />
-        <div className='songsheet-nav'>nav</div>
-        <Musiclist cols='2' list={this.state.songsheetList}></Musiclist>
+      <div className='songSheet'>
+        <Searchbar left='back' right='station' title='歌单' />
+        <div className='sub-page'>
+          <img className='banner songsheet-banner' src='http://ozt4jt8av.bkt.clouddn.com/3ds.png' />
+          <div className='songsheet-nav'>
+            <div className='songsheet-nav-btn'>
+              <label>全部歌单
+                <img className='inline-btn' src='../../static/images/right.png' />
+              </label>
+            </div>
+            <ul className='songsheet-nav-type'>
+              <li>欧美</li>
+              <li>民谣</li>
+              <li>摇滚</li>
+            </ul>
+          </div>
+          <Musiclist cols='2' list={this.state.songsheetList}></Musiclist>
+        </div>
       </div>
     );
   }

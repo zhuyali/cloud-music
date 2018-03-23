@@ -1,5 +1,7 @@
 import React from 'react';
 
+import history from '../../history';
+
 import './Searchbar.css';
 
 class Searchbar extends React.Component {
@@ -7,12 +9,25 @@ class Searchbar extends React.Component {
     super(props);
   }
 
+  handleClick(e) {
+    switch(e.target.className) {
+      case 'searchbar-back':
+        history.goBack();
+    }
+  }
+
   render() {
     return (
       <div class='searchbar-container'>
-        <img className='searchbar-music' src='../../../static/images/music.png'/>
-        <input className='searchbar-input' type='text' placeholder='搜索音乐、歌曲、电台' />
-        <img className='searchbar-station' src='../../../static/images/ph.png'/>
+        {this.props.left.split(' ').map((icon, index) => {
+          return <img className={`searchbar-${icon}`} src={`../../../static/images/${icon}.png`} onClick={(e) => this.handleClick(e)}/>;
+        })}
+        {this.props.isSearch ?
+          <input className='searchbar-input searchbar-text' type='text' placeholder='搜索音乐、歌曲、电台' /> :
+          <label className='searchbar-title searchbar-text'>{this.props.title}</label>}
+        {this.props.right.split(' ').map((icon, index) => {
+          return <img className={`searchbar-${icon}`} src={`../../../static/images/${icon}.png`} />;
+        })}
       </div>
     );
   }

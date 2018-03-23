@@ -1,9 +1,11 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import Slider from './slider/Slider';
 import Optionbar from './optionbar/Optionbar';
 import Musiclist from './musiclist/Musiclist';
 import Titlelink from './titlelink/Titlelink';
+
 
 class Homepage extends React.Component {
   constructor(props) {
