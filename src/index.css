@@ -11,12 +11,16 @@ a {
   text-decoration: none;
 }
 
-.page {
+.home-subpage {
   padding-top: 71px;
 }
 
-.sub-page {
+.other-subpage {
   padding-top: 37px;
+}
+
+.page {
+  margin-bottom: 45px;
 }
 
 .banner {

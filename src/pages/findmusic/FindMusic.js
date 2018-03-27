@@ -40,7 +40,7 @@ class FindMusic extends React.Component {
 
   render() {
     return (
-      <div className='page homepage'>
+      <div className='home-subpage page'>
         <Slider></Slider>
         <Optionbar></Optionbar>
         <Titlelink title='推荐歌单' path='/recommend'></Titlelink>

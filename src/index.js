@@ -7,17 +7,19 @@ import Homepage from './pages/homepage/Homepage';
 import SongSheet from './pages/songsheet/SongSheet';
 import Recommend from './pages/recommend/Recommend';
 import PersonalFM from './pages/personalfm/PersonalFM';
+import Footerbar from './components/footerbar/Footerbar';
 
 import './index.css';
 
 ReactDOM.render(
   <HashRouter>
     <div>
-      <Route path='/home' component={Homepage} />
-      <Route path='/personalFM' component={PersonalFM} />
-      <Route path='/recommend' component={Recommend} />
-      <Route path='/musiclist' component={SongSheet} />
-      <Route path='/rank' component={Rank} />
+      <Route path='/home' component={ Homepage } />
+      <Route path='/personalFM' component={ PersonalFM } />
+      <Route path='/recommend' component={ Recommend } />
+      <Route path='/musiclist' component={ SongSheet } />
+      <Route path='/rank' component={ Rank } />
+      <Footerbar></Footerbar>
     </div>
   </HashRouter>,
   document.getElementById('app')
