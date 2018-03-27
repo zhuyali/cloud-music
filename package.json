@@ -15,8 +15,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-id-swiper": "^1.6.1",
-    "react-router-dom": "^4.2.2",
-    "react-transition-group": "^1.2.1"
+    "react-keeper": "^2.1.7"
   },
   "devDependencies": {
     "css-loader": "^0.28.10",

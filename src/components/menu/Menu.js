@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-keeper';
 
 import './Menu.css';
 
@@ -9,10 +9,10 @@ class Menu extends React.Component {
     super(props);
     this.state = {
       menuItems: [{
-        path: '/home',
+        path: '/home/findMusic',
         name: '发现音乐'
       }, {
-        path: '/station',
+        path: '/home/station',
         name: '主播电台'
       }]
     }

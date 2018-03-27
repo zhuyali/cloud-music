@@ -1,7 +1,9 @@
 import React from 'react';
 
-import Musiclist from './musiclist/Musiclist';
-import Searchbar from './searchbar/Searchbar';
+import Musiclist from '../../components/musiclist/Musiclist';
+import Searchbar from '../../components/searchbar/Searchbar';
+
+import './SongSheet.css';
 
 class SongSheet extends React.Component {
   constructor(props) {
@@ -26,14 +28,22 @@ class SongSheet extends React.Component {
         img: 'http://p1.music.126.net/KsGj-uPLvKQL0KTaQi0xkQ==/18678503535409218.jpg',
         desc: 'ʚ韩语ɞ砂糖质感温软女声'
       }],
-      type: '0'
+      type: '0',
+      classNames: ''
     }
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        classNames: 'fade-in'
+      })
+    }, 0);
+  }
+
   render() {
-    let key = this.props.location.pathname;
     return (
-      <div className='songSheet'>
+      <div className={`songSheet fade-page ${this.state.classNames}`}>
         <Searchbar left='back' right='station' title='歌单' />
         <div className='sub-page'>
           <img className='banner songsheet-banner' src='http://ozt4jt8av.bkt.clouddn.com/3ds.png' />

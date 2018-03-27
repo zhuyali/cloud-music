@@ -1,6 +1,5 @@
 import React from 'react';
-
-import history from '../../history';
+import { Control } from 'react-keeper';
 
 import './Searchbar.css';
 
@@ -12,7 +11,7 @@ class Searchbar extends React.Component {
   handleClick(e) {
     switch(e.target.className) {
       case 'searchbar-back':
-        history.goBack();
+        Control.go(-1);
     }
   }
 

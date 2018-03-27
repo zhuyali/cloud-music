@@ -1,13 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 
-import Slider from './slider/Slider';
-import Optionbar from './optionbar/Optionbar';
-import Musiclist from './musiclist/Musiclist';
-import Titlelink from './titlelink/Titlelink';
+import Slider from '../../components/slider/Slider';
+import Optionbar from '../../components/optionbar/Optionbar';
+import Musiclist from '../../components/musiclist/Musiclist';
+import Titlelink from '../../components/titlelink/Titlelink';
 
-
-class Homepage extends React.Component {
+class FindMusic extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,4 +52,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default FindMusic;
