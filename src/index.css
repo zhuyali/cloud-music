@@ -44,3 +44,9 @@ a {
   opacity: 1;
   transition: opacity 1s ease-in;
 }
+
+.overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}

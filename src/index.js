@@ -14,7 +14,7 @@ import './index.css';
 ReactDOM.render(
   <HashRouter>
     <div>
-      <Route path='/home' component={ Homepage } />
+      <Route index miss path='/home' component={ Homepage } />
       <Route path='/personalFM' component={ PersonalFM } />
       <Route path='/recommend' component={ Recommend } />
       <Route path='/musiclist' component={ SongSheet } />

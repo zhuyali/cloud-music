@@ -46,7 +46,7 @@ class SongSheet extends React.Component {
       <div className={`page fade-page ${this.state.classNames}`}>
         <Searchbar left='back' right='station' title='歌单' />
         <div className='other-subpage'>
-          <img className='banner songsheet-banner' src='http://ozt4jt8av.bkt.clouddn.com/3ds.png' />
+          <img className='banner songsheet-banner' src='http://p1.music.126.net/2d_gTxI1zsWa0wmNz3DSNw==/109951163213468979.jpg' />
           <div className='songsheet-nav'>
             <div className='songsheet-nav-btn'>
               <label>全部歌单

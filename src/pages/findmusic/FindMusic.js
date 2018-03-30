@@ -34,14 +34,19 @@ class FindMusic extends React.Component {
       }, {
         img: 'http://p1.music.126.net/eD1ifZMc2lalg9hCbEs1lA==/109951163179337806.jpg?param=565y247',
         desc: '唯美原创《淡无烟》，愿月照河山，醒时无波澜'
-      }]
+      }],
+      sliderList: [
+        'http://ozt4jt8av.bkt.clouddn.com/1df.png',
+        'http://ozt4jt8av.bkt.clouddn.com/2ds.png',
+        'http://ozt4jt8av.bkt.clouddn.com/5ds.png'
+      ]
     }
   }
 
   render() {
     return (
       <div className='home-subpage page'>
-        <Slider></Slider>
+        <Slider imgs={this.state.sliderList}></Slider>
         <Optionbar></Optionbar>
         <Titlelink title='推荐歌单' path='/recommend'></Titlelink>
         <Musiclist cols='3' list={this.state.recommendList}></Musiclist>

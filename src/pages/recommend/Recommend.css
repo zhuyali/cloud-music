@@ -1,0 +1,21 @@
+.play-all {
+  height: 40px;
+  padding-left: 7px;
+  line-height: 40px;
+  font-size: 15px;
+  background: #ffffff;
+  border-bottom: 1px solid #f7f5f4;
+}
+
+.play-all-icon {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.top-fixed {
+  position: fixed;
+  top: 38px;
+  z-index: 100;
+  width: 100%;
+}

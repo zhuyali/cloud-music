@@ -1,0 +1,42 @@
+.iconoptionbar-wrapper {
+  display: flex;
+  border-bottom: 1px solid #eeeeec;
+}
+
+.iconoptionbar-item-2 {
+  width: 50%;
+}
+
+.iconoptionbar-item {
+  position: relative;
+  float: left;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconoptionbar-item-icon {
+  height: 28px;
+  width: 28px;
+  margin-right: 7px;
+}
+
+.iconoptionbar-item-label {
+  font-size: 14px;
+}
+
+.iconoptionbar-item:nth-child(n)::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  font-size: 25px;
+  width: 2px;
+  overflow: hidden;
+  color: #e7e7de;
+}
+
+.iconoptionbar-item:last-child::after {
+  content: none;
+}
