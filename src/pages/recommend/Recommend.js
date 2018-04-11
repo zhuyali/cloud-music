@@ -4,6 +4,7 @@ import Playlist from '../../components/playlist/playlist';
 import Searchbar from '../../components/searchbar/Searchbar';
 
 import './Recommend.css';
+import music from '../../../static/music/房间.mp3'
 
 class Recommend extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Recommend extends React.Component {
         title: '房间',
         singer: '刘瑞琦',
         album: '房间',
-        music: '../../../static/music/房间.mp3',
+        music: music,
         banner: 'http://p1.music.126.net/hOr_kcXuEDIsQ0JK1HOewQ==/5698768766875669.jpg?param=360y360'
 
       }, {
@@ -111,7 +112,7 @@ class Recommend extends React.Component {
         <div className='other-subpage'>
           <img className='banner songsheet-banner' src='http://p1.music.126.net/b_wbBiONd84N-SwqkVjH3w==/109951163213081224.jpg' />
           <div className={`play-all ${this.state.isTop ? 'top-fixed' : ''}`}>
-            <img src='../../../static/images/play.png' className='play-all-icon' />
+            <img src={require('../../../static/images/play.png')} className='play-all-icon' />
             播放全部
           </div>
           <Playlist list={this.state.playlist}></Playlist>

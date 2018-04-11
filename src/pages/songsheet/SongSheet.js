@@ -50,7 +50,7 @@ class SongSheet extends React.Component {
           <div className='songsheet-nav'>
             <div className='songsheet-nav-btn'>
               <label>全部歌单
-                <img className='inline-btn' src='../../static/images/right.png' />
+                <img className='inline-btn' src={require('../../../static/images/right.png')} />
               </label>
             </div>
             <ul className='songsheet-nav-type'>

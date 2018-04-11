@@ -6,6 +6,9 @@ import Musiclist from '../../components/musiclist/Musiclist';
 import Stationlist from '../../components/stationlist/Stationlist';
 import IconOptionBar from '../../components/iconoptionbar/iconoptionbar';
 
+import classifyImg from '../../../static/images/classify.png';
+import listImg from '../../../static/images/list.png';
+
 class Station extends React.Component {
   constructor(props) {
     super(props);
@@ -15,10 +18,10 @@ class Station extends React.Component {
         'http://ozt4jt8av.bkt.clouddn.com/8ds.png'
       ],
       iconOptions: [{
-        icon: '../../../static/images/classify.png',
+        icon: classifyImg,
         text: '电台分类'
       }, {
-        icon: '../../../static/images/list.png',
+        icon: listImg,
         text: '电台排行'
       }],
       stationList: [{

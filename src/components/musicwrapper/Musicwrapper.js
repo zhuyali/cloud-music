@@ -28,7 +28,7 @@ class Musicwrapper extends React.Component {
     if (this.state.hasPlaySong) {
       if (this.state.isPlaying) {
         this.refs.audioRef.pause();
-        this.refs.playBtn.src = '../../../static/images/playmusic.png';
+        this.refs.playBtn.src = require('../../../static/images/playmusic.png');
         this.refs.stickRef.style.transform = 'rotate(-20deg)';
         this.refs.bannerRef.style['animation-play-state'] = 'paused';
         this.setState({
@@ -36,7 +36,7 @@ class Musicwrapper extends React.Component {
         });
       } else {
         this.refs.audioRef.play();
-        this.refs.playBtn.src = '../../../static/images/pausemusic.png';
+        this.refs.playBtn.src = require('../../../static/images/pausemusic.png');
         this.refs.stickRef.style.transform = 'rotate(0deg)';
         this.refs.bannerRef.style['animation-play-state'] = 'running';
         this.setState({
@@ -80,10 +80,10 @@ class Musicwrapper extends React.Component {
   render() {
     return (
       <div className='musicplay-wrapper'>
-        <img ref='stickRef' className='musicplay-stick' src='../../../static/images/stick.png' />
+        <img ref='stickRef' className='musicplay-stick' src={require('../../../static/images/stick.png')} />
         <div className='blur-bg-banner'  style={{background: `url(${this.props.banner})`}}></div>
         <div className='musicplay-banner'>
-          <img ref='bannerRef' src={this.props.banner} />
+          <img ref='bannerRef' src={this.props.src ? this.props.banner : require(this.props.banner)} />
         </div>
         <div className='musicplay-progress-bar'>
           <span>{this.state.startTime}</span>
@@ -94,17 +94,20 @@ class Musicwrapper extends React.Component {
           <span>{this.state.endTime}</span>
         </div>
         <div className='musicplay-bar'>
-          <div><img src='../../../static/images/randomplay.png'/></div>
-          <div><img src='../../../static/images/pre.png'/></div>
+          <div><img src={require('../../../static/images/randomplay.png')}/></div>
+          <div><img src={require('../../../static/images/pre.png')}/></div>
           <div>
             <div className='musicplay-btn-wrapper' onClick={() => this.playMusic()}>
-              <img ref='playBtn' src='../../../static/images/playmusic.png'/>
+              <img ref='playBtn' src={require('../../../static/images/playmusic.png')}/>
             </div>
           </div>
-          <div><img src='../../../static/images/next.png'/></div>
-          <div><img src='../../../static/images/launch.png'/></div>
+          <div><img src={require('../../../static/images/next.png')}/></div>
+          <div><img src={require('../../../static/images/launch.png')}/></div>
         </div>
-        <audio onDurationChange={() => this.durationChange()} onTimeUpdate={() => this.updateTime()} ref='audioRef' loop src={this.props.src}></audio>
+        <audio onDurationChange={() => this.durationChange()}
+          onTimeUpdate={() => this.updateTime()} 
+          ref='audioRef' 
+          loop src={this.props.src}></audio>
       </div>
     );
   }

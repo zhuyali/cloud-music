@@ -13,7 +13,7 @@ class Titlelink extends React.Component {
       this.props.path ?
         <Link className='title-link' to={this.props.path}>
           <label>{this.props.title}</label>
-          <img className='icon-to-right' src='../../../static/images/right.png' />
+          <img className='icon-to-right' src={require('../../../static/images/right.png')} />
         </Link> :
         <label className='title-link'>{this.props.title}</label>
     );

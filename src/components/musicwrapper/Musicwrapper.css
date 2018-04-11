@@ -17,8 +17,10 @@
 .musicplay-banner {
   position: absolute;
   top: 88px;
-  margin: 0 50px;
+  left: 50%;
+  width: 230px;
   padding: 44px;
+  transform: translateX(-50%);
   background: url('../../../static/images/cdwrapper.png');
   background-repeat: no-repeat;
   background-size: 100%;

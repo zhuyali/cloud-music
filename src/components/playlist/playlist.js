@@ -21,7 +21,7 @@ class Playlist extends React.Component {
                     <div className='playlist-item-title overflow'>{item.title}</div>
                     <div className='playlist-item-detail overflow'>{item.singer} - {item.album}</div>
                   </div>
-                  <img src='../../../static/images/more.png' className='playlist-item-more' />
+                  <img src={require('../../../static/images/more.png')} className='playlist-item-more' />
                 </div>
               </Link>
             );
