@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Playlist from '../../components/playlist/playlist';
+import Playlist from '../../components/playlist/Playlist';
 import Searchbar from '../../components/searchbar/Searchbar';
 
 import './Recommend.css';
