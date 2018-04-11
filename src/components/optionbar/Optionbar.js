@@ -1,28 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-keeper';
 
 import './Optionbar.css';
+import playingImg from '../../../static/images/fm.png';
+import recommendImg from '../../../static/images/calendar.png';
+import musiclistImg from '../../../static/images/recommend.png';
+import rankImg from '../../../static/images/rank.png';
 
 class Optionbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       optionItems: [{
-        path: '/personalFM',
+        path: '/playing',
         name: '私人FM',
-        icon: '../../../static/images/fm.png'
+        icon: playingImg
       }, {
         path: '/recommend',
         name: '每日推荐',
-        icon: '../../../static/images/calendar.png'
+        icon: recommendImg
       }, {
         path: '/musiclist',
         name: '歌单',
-        icon: '../../../static/images/recommend.png'
+        icon: musiclistImg
       }, {
         path: '/rank',
         name: '排行榜',
-        icon: '../../../static/images/rank.png'
+        icon: rankImg
       }]
     }
   }

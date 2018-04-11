@@ -1,5 +1,6 @@
-body {
+body, html, #app, .container  {
   margin: 0;
+  height: 100%;
 }
 
 input {
@@ -11,49 +12,22 @@ a {
   text-decoration: none;
 }
 
-.page {
+.home-subpage {
   padding-top: 71px;
 }
 
-.sub-page {
+.other-subpage {
   padding-top: 37px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.page {
+  margin-bottom: 45px;
 }
 
 .banner {
   width: 100%;
-}
-
-.songsheet-nav {
-  height: 40px;
-  font-size: 12px;
-  line-height: 40px;
-  padding: 0 8px;
-}
-
-.songsheet-nav-btn {
-  display: inline-block;
-  color: #413f3f;
-}
-
-.songsheet-nav-btn label {
-  border: 1px solid #c7c4c4;
-  border-radius: 17px;
-  padding: 2px 12px 2px 16px;
-}
-
-.songsheet-nav-type {
-  float: right;
-  margin: 0;
-  color: #7d7a7a;
-}
-
-.songsheet-nav-type li:nth-child(1n+2)::before {
-  content: '|';
-  margin: 0 8px;
-}
-
-.songsheet-nav-type li {
-  display: inline-block;
 }
 
 .clearfix {
@@ -63,4 +37,19 @@ a {
 .inline-btn {
   width: 10px;
   padding-left: 3px;
+}
+
+.fade-page {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
 }

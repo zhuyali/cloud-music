@@ -1,0 +1,36 @@
+.stationlist-item {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  border-bottom: 1px solid #eeeeec;
+}
+
+.stationlist-item-banner {
+  width: 120px;
+  height: 120px;
+}
+
+.stationlist-item-content {
+  margin-left: 10px;
+}
+
+.stationlist-item-detail, .stationlist-item-intro {
+  font-size: 12px;
+  color: #918d8d;
+  line-height: 18px;
+}
+
+.stationlist-item-title {
+  line-height: 35px;
+}
+
+.stationlist-item-price {
+  line-height: 35px;
+  color: #d43c33;
+  font-size: 15px
+}
+
+.stationlist-item-svip {
+  font-size: 12px;
+  font-weight: 300;
+}

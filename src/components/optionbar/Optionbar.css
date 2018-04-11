@@ -30,12 +30,12 @@
   color: #d43c33;
   top: 15px;
   font-size: 12px;
-  left: calc(50% - 7px);
+  left: calc(50% - 5px);
 }
 
 .optionbar-item-icon {
   position: relative;
   top: 2px;
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
