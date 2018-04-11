@@ -11,9 +11,12 @@ class Recommend extends React.Component {
     this.state = {
       playlist: [{
         img: 'http://p1.music.126.net/s3L9LA3G6DzQz3DUUaIFhw==/18570751395106588.jpg?param=40y40',
-        title: '说散就散',
-        singer: 'JC',
-        album: '说散就散'
+        title: '房间',
+        singer: '刘瑞琦',
+        album: '房间',
+        music: '../../../static/music/房间.mp3',
+        banner: 'http://p1.music.126.net/hOr_kcXuEDIsQ0JK1HOewQ==/5698768766875669.jpg?param=360y360'
+
       }, {
         img: 'http://p1.music.126.net/Dw6Ku5I90rs_yCsDAvmv1g==/18777459581329626.jpg?param=40y40',
         title: '追光者',
@@ -85,13 +88,11 @@ class Recommend extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('unmount')
     window.removeEventListener('scroll', () => {this.handleScroll.call(this)});
   }
 
   handleScroll(e) {
     let topScroll = window.scrollY;
-    console.log(this)
     if (topScroll >= 172.59) {
       this.setState({
         isTop: true

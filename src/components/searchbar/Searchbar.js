@@ -23,6 +23,11 @@ class Searchbar extends React.Component {
         })}
         {this.props.isSearch ?
           <input className='searchbar-input searchbar-text' type='text' placeholder='搜索音乐、歌曲、电台' /> :
+          this.props.subTitle ? 
+          <div className="searchbar-title searchbar-text">
+            <div className=' searchbar-title-text'>{this.props.title}</div>
+            <div className='searchbar-subtitle-text'>{this.props.subTitle}</div>
+          </div> :
           <label className='searchbar-title searchbar-text'>{this.props.title}</label>}
         {this.props.right.split(' ').map((icon, index) => {
           return <img className={`searchbar-${icon}`} src={`../../../static/images/${icon}.png`} />;

@@ -1,5 +1,6 @@
-body {
+body, html, #app, .container  {
   margin: 0;
+  height: 100%;
 }
 
 input {
@@ -17,6 +18,8 @@ a {
 
 .other-subpage {
   padding-top: 37px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .page {

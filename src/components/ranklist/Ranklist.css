@@ -1,0 +1,29 @@
+.ranklist-item-top3 {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 13px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.ranklist-item-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 105px;
+  width: calc(100% - 105px);
+  height: 100%;
+}
+
+.ranklist-item {
+  position: relative;
+}
+
+.ranklist-top3-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 28px;
+  line-height: 28px;
+}

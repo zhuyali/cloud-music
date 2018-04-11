@@ -8,7 +8,7 @@ class Optionbar extends React.Component {
     super(props);
     this.state = {
       optionItems: [{
-        path: '/personalFM',
+        path: '/playing',
         name: '私人FM',
         icon: '../../../static/images/fm.png'
       }, {
