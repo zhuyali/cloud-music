@@ -64,7 +64,6 @@ class Musicwrapper extends React.Component {
 
   updateTime() {
     if (this.transformTime(this.refs.audioRef.currentTime) !== this.state.startTime) {
-      console.log(this.refs.audioRef.currentTime)
       this.setState({
         startTime: this.transformTime(this.refs.audioRef.currentTime)
       });
