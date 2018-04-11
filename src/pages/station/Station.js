@@ -4,7 +4,7 @@ import Slider from '../../components/slider/Slider';
 import Titlelink from '../../components/titlelink/Titlelink';
 import Musiclist from '../../components/musiclist/Musiclist';
 import Stationlist from '../../components/stationlist/Stationlist';
-import IconOptionBar from '../../components/iconoptionbar/iconoptionbar';
+import IconOptionBar from '../../components/iconoptionbar/IconOptionBar';
 
 import classifyImg from '../../../static/images/classify.png';
 import listImg from '../../../static/images/list.png';
