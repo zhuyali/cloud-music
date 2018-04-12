@@ -15,7 +15,7 @@ class Playing extends React.Component {
       src: Control.state ? Control.state.src : '',
       title: Control.state ? Control.state.title : '暂无歌曲',
       singer: Control.state ? Control.state.singer : '',
-      banner: Control.state ? Control.state.banner : '../../../static/images/songplaceholder.png'
+      banner: Control.state ? Control.state.banner : ''
     };
   }
 
