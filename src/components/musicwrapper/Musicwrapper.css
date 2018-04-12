@@ -50,6 +50,7 @@
 .blur-bg-banner {
   height: 100%;
   filter: blur(50px);
+  background: url('../../../static/images/songplaceholder.png');
 }
 
 .musicplay-btn-wrapper {
