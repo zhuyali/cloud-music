@@ -5,7 +5,7 @@
 ### 本地调试
 
 ```shell
-$ npm run dev
+$ npm run start
 ```
 
 ### 打包
