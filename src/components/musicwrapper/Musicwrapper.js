@@ -81,9 +81,9 @@ class Musicwrapper extends React.Component {
     return (
       <div className='musicplay-wrapper'>
         <img ref='stickRef' className='musicplay-stick' src={require('../../../static/images/stick.png')} />
-        <div className='blur-bg-banner'  style={{background: `url(${this.props.banner})`}}></div>
+        <div className='blur-bg-banner'  style={{background: `url(${this.props.bannerUrl})`}}></div>
         <div className='musicplay-banner'>
-          <img ref='bannerRef' src={this.props.banner === '' ? require('../../../static/images/songplaceholder.png') : this.props.banner} />
+          <img ref='bannerRef' src={this.props.banner} />
         </div>
         <div className='musicplay-progress-bar'>
           <span>{this.state.startTime}</span>
