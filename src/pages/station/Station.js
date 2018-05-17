@@ -9,14 +9,13 @@ import IconOptionBar from '../../components/iconoptionbar/IconOptionBar';
 import classifyImg from '../../../static/images/classify.png';
 import listImg from '../../../static/images/list.png';
 
+import { find } from '../../api';
+
 class Station extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sliderList: [
-        'http://ozt4jt8av.bkt.clouddn.com/4fd.png',
-        'http://ozt4jt8av.bkt.clouddn.com/8ds.png'
-      ],
+      sliderList: [],
       iconOptions: [{
         icon: classifyImg,
         text: '电台分类'
@@ -45,44 +44,91 @@ class Station extends React.Component {
         intro: '颠覆你对中华文化的认知',
         price: 199
       }],
-      recommendList: [{
-        img: 'http://p1.music.126.net/2nPPbvXNVwUyM4n1Atiwgw==/109951163191963379.jpg',
-        desc: '港片金曲｜相逢一场情"忆"满满演唱会'
-      }, {
-        img: 'http://p1.music.126.net/RChgxmQWXis1EC9-zBu1yw==/109951163201230274.jpg',
-        desc: '無前奏说唱丨吃颗蜜糖 再饮烈酒'
-      }, {
-        img: 'http://p1.music.126.net/npjVzLVW9E0fex6HZbv1iw==/109951163198861683.jpg',
-        desc: '黄舒骏推荐华语流行音乐30年必听歌曲'
-      }, {
-        img: 'http://p1.music.126.net/bSaWp18GCj1ay2fwA62TDg==/109951163189386204.jpg',
-        desc: '清晨，愿与品茗粥尚温'
-      }, {
-        img: 'http://p1.music.126.net/eRel6Kk0JM08rDRXqnX6yw==/109951162972312772.jpg',
-        desc: '『动漫原声』春日物语'
-      }, {
-        img: 'http://p1.music.126.net/KsGj-uPLvKQL0KTaQi0xkQ==/18678503535409218.jpg',
-        desc: 'ʚ韩语ɞ砂糖质感温软女声'
-      }],
-      exclusiveList: [{
-        img: 'http://p1.music.126.net/BMPo0UyZCWi3O_rp3f9CRA==/109951163199126055.jpg?param=565y247',
-        desc: '小李子经典混剪，多少人曾爱慕你年轻时的容颜'
-      }, {
-        img: 'http://p1.music.126.net/eD1ifZMc2lalg9hCbEs1lA==/109951163179337806.jpg?param=565y247',
-        desc: '唯美原创《淡无烟》，愿月照河山，醒时无波澜'
-      }]
+      catelist: [],
+      recommendList: []
     }
+  }
+
+  getBanner() {
+    find.getBanner()
+      .then(res => {
+        if (res.status == 200) {
+          if (res.data && res.data.banners && res.data.banners.length) {
+            this.setState({
+              sliderList: res.data.banners
+            });
+          }
+        }
+      });
+  }
+
+  getCatelist() {
+    find.getCatelist()
+      .then(res => {
+        if (res.status == 200) {
+          if (res.data && res.data.categories && res.data.categories.length) {
+            res.data.categories.forEach(category => {
+              this.getStationByType(category.id);
+            });
+            this.setState({
+              catelist: res.data.categories
+            });
+          }
+        }
+      });
+  }
+
+  getStationByType(id) {
+    find.getStationByType(id)
+      .then(res => {
+        if (res.status == 200) {
+          if (res.data && res.data.djRadios && res.data.djRadios.length) {
+            this.setState({
+              [id]: res.data.djRadios
+            });
+          }
+        }
+      });
+  }
+
+  getRecommendList() {
+    find.getRecommendStationList()
+      .then(res => {
+        if (res.status == 200) {
+          if (res.data && res.data.djRadios && res.data.djRadios.length) {
+            this.setState({
+              recommendList: res.data.djRadios
+            });
+          }
+        }
+      });
+  }
+
+  componentWillMount() {
+    this.getBanner();
+    this.getCatelist();
+    this.getRecommendList();
   }
 
   render() {
     return (
       <div className='home-subpage page'>
-        <Slider imgs={this.state.sliderList}></Slider>
+        <Slider banners={this.state.sliderList}></Slider>
         <IconOptionBar cols='2' list={this.state.iconOptions}></IconOptionBar>
         <Titlelink title='付费精品'></Titlelink>
         <Stationlist list={this.state.stationList}></Stationlist>
         <Titlelink title='电台个性推荐'></Titlelink>
         <Musiclist cols='3' list={this.state.recommendList}></Musiclist>
+        {
+          this.state.catelist.map(category => {
+            return (
+              <div>
+                <Titlelink title={category.name}></Titlelink>
+                <Musiclist cols='3' list={this.state[category.id]}></Musiclist>
+              </div>
+            )
+          })
+        }
       </div>
     );
   }

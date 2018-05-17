@@ -11,11 +11,11 @@ class Musiclist extends React.Component {
     return (
       <div className='musiclist-wrapper clearfix'>
         {
-          this.props.list.map((item, index) => {
+          this.props.list && this.props.list.map((item, index) => {
             return (
               <div className={`musiclist-item musiclist-item-${this.props.cols}`}>
-                <img className='musiclist-item-banner' src={item.img} />
-                <div className='musiclist-item-label'>{item.desc}</div>
+                <img className='musiclist-item-banner' src={item.picUrl} />
+                <div className='musiclist-item-label'>{item.name}</div>
               </div>
             );
           })

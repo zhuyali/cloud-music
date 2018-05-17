@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.swiper-pagination-bullet {
+  background: #c1b7b7!important;
+}
+
 .swiper-pagination-bullet-active {
   background: #d43c33!important;
 }

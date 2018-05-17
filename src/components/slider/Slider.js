@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import Swiper from 'react-id-swiper';
 
@@ -19,9 +18,9 @@ class Slider extends React.Component {
       autoplay: true
     };
     return (
-      <Swiper {...params}>
-        {this.props.imgs.map((img, index) => {
-          return <div key={index}><img className src={img} /></div>
+      <Swiper shouldSwiperUpdate="true" {...params}>
+        {this.props.banners.map((banner, index) => {
+          return <div key={index}><img className src={banner.picUrl} /></div>
         })}
       </Swiper>
     );

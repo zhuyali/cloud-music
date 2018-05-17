@@ -1,6 +1,7 @@
 .musiclist-wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 5px;
 }
 
 .musiclist-item {
@@ -31,8 +32,8 @@
 }
 
 .musiclist-item-label {
-  height: 40px;
+  height: 33px;
   overflow: hidden;
   font-size: 12px;
-  line-height: 19px;
+  line-height: 16px;
 }
