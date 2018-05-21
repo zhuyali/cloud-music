@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-keeper';
+import { Control } from 'react-keeper';
 
 import Station from '../station/Station';
 import renderObj from '../../common/const';
@@ -33,8 +34,8 @@ class Homepage extends React.Component {
       <div className={`page ${this.state.classNames}`}>
         <Searchbar left='music' right='station' isSearch='true' />
         <Menu />
-        <Route index miss path='/findMusic' component={FindMusic} />
-        <Route path='/station' component={Station} />
+        <Route cache index miss path='/findMusic' component={FindMusic} />
+        <Route cache path='/station' component={Station} />
       </div>
     );
   }

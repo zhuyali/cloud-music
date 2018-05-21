@@ -44,6 +44,12 @@
   color: #e9e5e5;
 }
 
+.searchbar-title-text {
+  width: 300px;
+}
+
 .searchbar-subtitle-text {
+  width: 300px;
+  height: 16px;
   font-size: 12px;
 }

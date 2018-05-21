@@ -1,5 +1,7 @@
 const renderObj = {
-  home: true
+  home: true,
+  uid: 0,
+  playlist: []
 };
 
 export default renderObj;

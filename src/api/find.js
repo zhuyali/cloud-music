@@ -27,3 +27,11 @@ export function getStationByType(id, limit = 3) {
 export function getRecommendStationList(limit = 6) {
   return axios.get(`http://localhost:3000/dj/recommend?limit=${limit}`)
 }
+
+export function getRecommendSongs() {
+  return axios.get('http://localhost:3000/recommend/songs');
+}
+
+export function getLyric(id) {
+  return axios.get(`http://localhost:3000/lyric?id=${id}`);
+}

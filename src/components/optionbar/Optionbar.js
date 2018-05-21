@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-keeper';
 
+import renderObj from '../../common/const';
+
 import './Optionbar.css';
 import playingImg from '../../../static/images/fm.png';
 import recommendImg from '../../../static/images/calendar.png';

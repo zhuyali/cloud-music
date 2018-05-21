@@ -21,9 +21,6 @@
 }
 
 .ranklist-top3-item {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   height: 28px;
   line-height: 28px;
 }

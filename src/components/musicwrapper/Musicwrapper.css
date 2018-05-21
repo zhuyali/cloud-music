@@ -5,8 +5,7 @@
   width: 90px;
   transition: all .3s;
   transform-origin: 0 0;
-  transform: rotate(-20deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .musicplay-wrapper {
@@ -24,13 +23,14 @@
   background: url('../../../static/images/cdwrapper.png');
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: 1;
 }
 
 .musicplay-banner img {
   width: 100%;
   border-radius: 100%;
   animation: rotate 8s linear infinite;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 .musicplay-bar {
@@ -113,4 +113,26 @@
 .musicplay-progress-bar span {
   display: inline-block;
   width: 25px;
+}
+
+.lyric {
+  position: absolute;
+  height: calc(100% - 100px);
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #c7c4c4;
+  opacity: 0;
+  overflow: auto;
+}
+
+.current {
+  color: #fff;
+}
+
+.circle-banner {
+  opacity: 1;
 }

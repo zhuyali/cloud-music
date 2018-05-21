@@ -83,13 +83,13 @@ class FindMusic extends React.Component {
 
   render() {
     return (
-      <div className='home-subpage page'>
+      <div className="home-subpage page">
         <Slider banners={this.state.sliderList}></Slider>
         <Optionbar></Optionbar>
         <Titlelink title='推荐歌单' path='/recommend'></Titlelink>
         <Musiclist cols='3' list={this.state.recommendList}></Musiclist>
         <Titlelink title='最新音乐' path='/newMusic'></Titlelink>
-        <Musiclist cols='3' list={this.state.newMusicList}></Musiclist>
+        <Musiclist cols='3' list={this.state.newMusicList} hasOther="true"></Musiclist>
         <Titlelink title='主播电台' path='/home/station'></Titlelink>
         <Musiclist cols='3' list={this.state.recommendStation}></Musiclist>
       </div>

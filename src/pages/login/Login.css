@@ -1,0 +1,40 @@
+.login-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #d43c33;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-text {
+  position: relative;
+  top: -15px;
+  width: 100%;
+  height: 50px;
+}
+
+.input-text span {
+  display: inline-block;
+  width: 65px;
+  text-align: right;
+}
+
+.input-text input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.login-btn {
+  padding: 7px 20px;
+  border: 1px;
+  border-radius: 10px;
+  font-size: 15px;
+}
