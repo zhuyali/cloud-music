@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "build": "webpack"
   },
-  "author": "",
+  "author": "zhuyali",
   "license": "ISC",
   "dependencies": {
     "history": "^4.7.2",
