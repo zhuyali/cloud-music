@@ -49,15 +49,15 @@
 
 .blur-bg-banner {
   height: 100%;
-  filter: blur(50px);
+  filter: blur(50px) brightness(50%);
   background: url('../../../static/images/songplaceholder.png');
 }
 
 .musicplay-btn-wrapper {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border: 2px #fff solid;
   border-radius: 100%;
 }
@@ -107,12 +107,17 @@
   background: #d43c33;
   top: -6px;
   left: 16px;
-  transition: all .3s;
+  transition: left .3s;
 }
 
 .musicplay-progress-bar span {
   display: inline-block;
   width: 25px;
+}
+
+.musicplayer-bar-btn {
+  width: 25px;
+  height: 25px;
 }
 
 .lyric {

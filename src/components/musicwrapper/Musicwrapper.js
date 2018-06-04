@@ -23,8 +23,8 @@ class Musicwrapper extends React.Component {
     };
   }
 
-  getLyric() {
-    find.getLyric(this.props.musicId)
+  getLyric(musicId) {
+    find.getLyric(musicId)
       .then(res => {
         if (res.status == 200) {
           if (res.data && res.data.lrc && res.data.lrc.lyric) {
@@ -39,7 +39,8 @@ class Musicwrapper extends React.Component {
               timeArray[index] = time.substring(1, 6);
             });
             lastIndexArray.forEach((lastIndex, i) => {
-              lyricArray.push(lyric.substring(lastIndex + 1, i < indexArray.length ? indexArray[i + 1] : Infinity));
+              let lyricLine = lyric.substring(lastIndex + 1, i < indexArray.length ? indexArray[i + 1] : Infinity);
+              lyricArray.push(lyricLine);
             });
             this.setState({
               lyric: lyric,
@@ -56,7 +57,7 @@ class Musicwrapper extends React.Component {
       this.setState({
         hasPlaySong: true
       });
-      this.getLyric();
+      this.getLyric(this.props.musicId);
     }
   }
 
@@ -112,9 +113,14 @@ class Musicwrapper extends React.Component {
     // 如果歌词切换频率很高的话，有些歌词无法高亮
     let index = this.state.timeArray.indexOf(current);
     if (index !== -1) {
+      while(!this.state.lyricArray[index]) {
+        index++;
+      }
       this.setState({
         currentIndex: index
       });
+      let offset = document.getElementsByClassName('current')[0].offsetTop;
+      document.getElementsByClassName('lyric')[0].scrollTop = offset - 14;
     }
   }
 
@@ -130,8 +136,9 @@ class Musicwrapper extends React.Component {
     });
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     // 这里这样才能改，why
+    this.getLyric(nextProps.musicId ? nextProps.musicId : this.props.musicId);
     setTimeout(() => {
       this.refs.thumbRef.style.left = '16px';
     }, 100);
@@ -169,15 +176,15 @@ class Musicwrapper extends React.Component {
           <span>{this.state.endTime}</span>
         </div>
         <div className='musicplay-bar'>
-          <div><img src={require('../../../static/images/randomplay.png')} /></div>
-          <div><img src={require('../../../static/images/pre.png')} onClick={() => this.props.pre()} /></div>
+          <div><img className="musicplayer-bar-btn" src={require('../../../static/images/randomplay.png')} /></div>
+          <div><img className="musicplayer-bar-btn" src={require('../../../static/images/pre.png')} onClick={() => this.props.pre()} /></div>
           <div>
             <div className='musicplay-btn-wrapper' onClick={() => this.playMusic()}>
               <img ref='playBtn' src={require('../../../static/images/playmusic.png')} />
             </div>
           </div>
-          <div><img src={require('../../../static/images/next.png')} onClick={() => this.props.next()} /></div>
-          <div><img src={require('../../../static/images/launch.png')} /></div>
+          <div><img className="musicplayer-bar-btn" src={require('../../../static/images/next.png')} onClick={() => this.props.next()} /></div>
+          <div><img className="musicplayer-bar-btn" src={require('../../../static/images/launch.png')} /></div>
         </div>
         <audio onDurationChange={() => this.durationChange()}
           autoplay="autoplay"

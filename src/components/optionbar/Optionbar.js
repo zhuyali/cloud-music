@@ -43,9 +43,9 @@ class Optionbar extends React.Component {
                 <Link to={optionItem.path}>
                   <div className='optionbar-icon-wrapper'>
                     <img className='optionbar-item-icon' src={optionItem.icon} />
+                    {optionItem.name === '每日推荐' ? <label className='optionbar-item-date'>{new Date().getDate()}</label> : ''}
                   </div>
                   <div className='optionbar-item-label'>{optionItem.name}</div>
-                  {optionItem.name === '每日推荐' ? <label className='optionbar-item-date'>{new Date().getDate()}</label> : ''}
                 </Link>
               </div>
             );

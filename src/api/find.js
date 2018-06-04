@@ -35,3 +35,11 @@ export function getRecommendSongs() {
 export function getLyric(id) {
   return axios.get(`http://localhost:3000/lyric?id=${id}`);
 }
+
+export function getSongSheet() {
+  return axios.get(`http://localhost:3000/top/playlist`);
+}
+
+export function getOfficiaRankList(idx, limit) {
+  return axios.get(`http://localhost:3000/top/list?idx=${idx}&limit=${limit}`);
+}
