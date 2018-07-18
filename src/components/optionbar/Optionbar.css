@@ -2,6 +2,7 @@
   height: 70px;
   display: flex;
   align-items: center;
+  padding-bottom: 5px;
   border-bottom: 1px solid #EBEBEB;
 }
 
@@ -27,10 +28,12 @@
 
 .optionbar-item-date {
   position: absolute;
-  color: #d43c33;
+  width: 20px;
   top: 15px;
+  left: 50%;
+  margin-left: -10px;
+  color: #d43c33;
   font-size: 12px;
-  left: calc(50% - 5px);
 }
 
 .optionbar-item-icon {

@@ -36,7 +36,7 @@ class Footerbar extends React.Component {
   render() {
     return (
       <ul className='footerbar-container'>
-        {this.state.options.map((option, index) => {
+        {this.state.options.map((option) => {
           return (
             <li className='footerbar-item'>
               <svg width='16' height='16' viewBox='0 0 1024 1024'>

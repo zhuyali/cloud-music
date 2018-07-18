@@ -5,8 +5,7 @@
   width: 90px;
   transition: all .3s;
   transform-origin: 0 0;
-  transform: rotate(-20deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .musicplay-wrapper {
@@ -24,13 +23,14 @@
   background: url('../../../static/images/cdwrapper.png');
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: 1;
 }
 
 .musicplay-banner img {
   width: 100%;
   border-radius: 100%;
   animation: rotate 8s linear infinite;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 .musicplay-bar {
@@ -49,15 +49,15 @@
 
 .blur-bg-banner {
   height: 100%;
-  filter: blur(50px);
+  filter: blur(50px) brightness(50%);
   background: url('../../../static/images/songplaceholder.png');
 }
 
 .musicplay-btn-wrapper {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border: 2px #fff solid;
   border-radius: 100%;
 }
@@ -107,10 +107,37 @@
   background: #d43c33;
   top: -6px;
   left: 16px;
-  transition: all .3s;
+  transition: left .3s;
 }
 
 .musicplay-progress-bar span {
   display: inline-block;
   width: 25px;
+}
+
+.musicplayer-bar-btn {
+  width: 25px;
+  height: 25px;
+}
+
+.lyric {
+  position: absolute;
+  height: calc(100% - 100px);
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #c7c4c4;
+  opacity: 0;
+  overflow: auto;
+}
+
+.current {
+  color: #fff;
+}
+
+.circle-banner {
+  opacity: 1;
 }

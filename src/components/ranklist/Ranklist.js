@@ -19,7 +19,7 @@ class Ranklist extends React.Component {
                   <ol className='ranklist-item-top3'>
                     {
                       item.top3.map((top, index) => {
-                        return <li className="ranklist-top3-item">{`${index + 1}. ${top.title} - ${top.singer} - ${top.album}`}</li>
+                        return <li className="ranklist-top3-item overflow">{`${index + 1}. ${top.title} - ${top.singer} - ${top.album}`}</li>
                       })
                     }
                   </ol>
