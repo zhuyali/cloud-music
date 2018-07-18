@@ -17,6 +17,7 @@
 }
 
 .ranklist-item {
+  height: 110px;
   position: relative;
 }
 
