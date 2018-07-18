@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { find } from '../../api';
+import { recommend } from '../../api';
 
 import './Musicwrapper.css';
 
@@ -24,7 +24,7 @@ class Musicwrapper extends React.Component {
   }
 
   getLyric(musicId) {
-    find.getLyric(musicId)
+    recommend.getLyric(musicId)
       .then(res => {
         if (res.status == 200) {
           if (res.data && res.data.lrc && res.data.lrc.lyric) {

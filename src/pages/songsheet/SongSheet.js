@@ -4,7 +4,7 @@ import Musiclist from '../../components/musiclist/Musiclist';
 import Searchbar from '../../components/searchbar/Searchbar';
 
 import './SongSheet.css';
-import { find } from '../../api';
+import { songsheet } from '../../api';
 
 class SongSheet extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class SongSheet extends React.Component {
   }
 
   getSongSheet() {
-    find.getSongSheet()
+    songsheet.getSongSheet()
       .then(res => {
         if (res.status == 200) {
           if (res.data && res.data.playlists && res.data.playlists.length) {

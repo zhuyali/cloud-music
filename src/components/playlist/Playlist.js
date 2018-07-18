@@ -14,7 +14,8 @@ class Playlist extends React.Component {
         {
           this.props.list.map((item, index) => {
             return (
-              <Link to={`/playing`} state={{ index: index, id: item.musicId, banner: item.img, singer: item.singer, title: item.title }}>
+              <Link to={`/playing`} 
+                state={{ index: index, id: item.musicId, banner: item.img, singer: item.singer, title: item.title }}>
                 <div className='playlist-item'>
                   <img className='playlist-item-thumbnail' src={item.img} />
                   <div className='playlist-item-content'>

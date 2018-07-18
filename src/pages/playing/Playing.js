@@ -14,11 +14,11 @@ class Playing extends React.Component {
     super(props);
     this.state = {
       classNames: '',
-      index: Control.state ? Control.state.index : -1,
-      id: Control.state ? Control.state.id : '',
-      title: Control.state ? Control.state.title : '暂无歌曲',
-      singer: Control.state ? Control.state.singer : '',
-      banner: Control.state ? Control.state.banner : songplaceholderImg
+      index: Control.state && Control.state.index ? Control.state.index : 0,
+      id: Control.state && Control.state.id ? Control.state.id : '',
+      title: Control.state && Control.state.title ? Control.state.title : '暂无歌曲',
+      singer: Control.state && Control.state.singer ? Control.state.singer : '',
+      banner: Control.state && Control.state.banner ? Control.state.banner : songplaceholderImg
     };
   }
 

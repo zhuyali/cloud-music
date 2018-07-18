@@ -1,40 +1,64 @@
 .login-container {
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: #d43c33;
+  background: #fff;
+}
+
+.logo {
+  position: relative;
+  top: -90px;
+  right: -10px;
 }
 
 .input-container {
-  text-align: center;
-}
-
-.input-text {
   position: relative;
-  top: -15px;
+  text-align: center;
+  top: -50px;
+  width: 80%;
+}
+
+.u-input {
+  box-sizing: border-box;
+  margin: 6px 0;
+  padding: 7px 18px;
   width: 100%;
-  height: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #f7f7f7;
 }
 
-.input-text span {
-  display: inline-block;
-  width: 65px;
-  text-align: right;
+.u-must {
+  color: #e31436;
+  font-size: 10px;
+  vertical-align: super;
 }
 
-.input-text input {
-  width: 200px;
-  height: 25px;
-  border-radius: 5px;
+.u-label {
+  text-align: left;
 }
 
 .login-btn {
+  margin-top: 20px;
   padding: 7px 20px;
+  width: 100%;
   border: 1px;
   border-radius: 10px;
   font-size: 15px;
+  color: #fff;
+  background: #e31436;
+}
+
+.login-notify {
+  position: absolute;
+  bottom: 50px;
+  padding: 5px;
+  background: #eaeae6;
 }

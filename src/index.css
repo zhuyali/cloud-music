@@ -58,3 +58,8 @@ a {
   overflow: hidden;
   white-space: nowrap; 
 }
+
+.loading {
+  padding: 10px;
+  text-align: center;
+}

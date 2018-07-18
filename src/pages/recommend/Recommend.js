@@ -1,12 +1,11 @@
 import React from 'react';
-import { Control } from 'react-keeper';
 
 import renderObj from '../../common/const';
 import Playlist from '../../components/playlist/Playlist';
 import Searchbar from '../../components/searchbar/Searchbar';
 
 import './Recommend.css';
-import { find } from '../../api';
+import { recommend } from '../../api';
 
 class Recommend extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ class Recommend extends React.Component {
   }
 
   getRecommendSongs() {
-    find.getRecommendSongs()
+    recommend.getRecommendSongs()
       .then(res => {
         if (res.status == 200) {
           if (res.data && res.data.recommend && res.data.recommend.length) {
